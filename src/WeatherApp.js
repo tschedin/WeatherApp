@@ -44,8 +44,9 @@ e.preventDefault();
                             placeholder="Zip Code">
                     </input>
                     <button type="submit">Submit</button>                
-                </form>
+                </form>                
         </div> 
+        <WeatherAppTempType entries={this.state.items}></WeatherAppTempType>
       </div>
     ); 
   } 
