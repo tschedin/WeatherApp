@@ -1,16 +1,18 @@
 import React from "react";
+
 import Titles from "./Components/titles";
+import Form from "./Components/form";
 
 class WeatherApp extends React.Component {
 render() {
     return (
     <div>
-        <p>Hello</p>
-        <h1>meow! meow!</h1>
+          <Titles />      
+          <Form />      
     </div>
         );
 }
 
-}
+}; 
 
 export default WeatherApp;
