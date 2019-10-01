@@ -12,7 +12,7 @@ class WeatherApp extends Component {
 
         this.addZip = this.addZip.bind(this);
     }
-
+    
     addZip(e) {
 if (this._inputElement.value !=="") {
     var newZip = {
