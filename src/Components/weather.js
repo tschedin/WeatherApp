@@ -9,7 +9,7 @@ class Weather extends React.Component {
                 {this.props.temperature}
                 {this.props.humidity}
                 {this.props.description}
-                {this.props.temperature}
+                {this.props.error}
             </div>            
         );
     }    
