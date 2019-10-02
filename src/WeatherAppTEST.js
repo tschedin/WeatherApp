@@ -33,7 +33,7 @@ class WeatherApp extends React.Component {
             description: data.weather[0].description,
             error: ""
         });
-    } else
+    } else {
     this.setState({
         temperature: undefined,
         city: undefined,
@@ -43,6 +43,8 @@ class WeatherApp extends React.Component {
         error: "Invalid entry.  Please check city and country."   
     });
 }
+}
+
 render() {
     return (
     <div>
