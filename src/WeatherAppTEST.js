@@ -51,10 +51,10 @@ render() {
               <div className="main">
                   <div className="container">
                       <div className="row">
-                        <div classname="col-xs-5 title-container">
-                            <Titles />                          
+                        <div className="col-xs-5 title-container">
+                            <Titles />                               
                         </div>
-                        <div classname="col-xs-7 form-container">
+                        <div className="col-xs-7 form-container">
                             <Form getWeather={this.getWeather}/>   
                             <Weather 
                                 temperature={this.state.temperature} 
