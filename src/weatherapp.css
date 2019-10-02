@@ -7,7 +7,7 @@ body {
 }
 
 .wrapper {
-  background: linear-gradient(to right, #e67e22, #e74c3c);
+  background: linear-gradient(to right, #2287e6, #1237b1);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -24,13 +24,13 @@ body {
 
 .title-container {
   height: 90vh;
-  background: url("img/bg.jpg") center center no-repeat;
+  background: url("img/bg2.jpg") center center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #000;
+  color: rgb(49, 49, 49);
 }
 
 .title-container__title {
@@ -58,7 +58,7 @@ body {
 input[type="text"] {
   background-color: transparent;
   border: 0;
-  border-bottom: solid 1px #f16051;
+  border-bottom: solid 1px #2287e6;
   width: 30%;
   padding-bottom: 4px;
   color: #fff !important;
@@ -82,12 +82,12 @@ button {
   border: 0;
   padding: 8px 20px;
   margin: 0 2px;
-  border-radius: 2px;
+  border-radius: 12px;
   font-weight: lighter;
   letter-spacing: 1px;
   font-size: 15px;
   cursor: pointer;
-  background-color: #f16051;
+  background-color: #2287e6;
   color: #fff;
   font-weight: 100;
 }
@@ -104,7 +104,7 @@ button:active {
 }
 
 .weather__key {
-  color: #f16051;
+  color: #2287e6;
   border-bottom: solid 2px rgba(255,255,255,0.06);
   padding: 20px 0 20px 0;
   font-weight: 400;
@@ -120,7 +120,7 @@ button:active {
 }
 
 .weather__error {
-  color: #f16051;
+  color: #2287e6;
   font-size: 20px;
   letter-spacing: 1px;
   font-weight: 200;
