@@ -5,9 +5,14 @@ import Form from "./Components/form";
 import Weather from "./Components/weather";
 
 const API_KEY = "d798f5a297dd3b2e788deb6074ca3429";
-// http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID={}
+
 
 class WeatherApp extends React.Component {
+    getWeather = async () => {
+        const apiCall = await fetch('http://api.openweathermap.org/data/2.5/weather?id=524901&APPID=${API_KEY}');
+        const data = await apiCall.json();
+        console.log(data);
+    }
 render() {
     return (
     <div>
