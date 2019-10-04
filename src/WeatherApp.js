@@ -25,12 +25,12 @@ class WeatherApp extends React.Component {
         
         if ( city  && country ) {
         this.setState({
-            temperature: data.main.temp,
+            temperature: (data.main || []).temp,
             city: data.name,
-            country: data.sys.country,
-            humidity: data.main.humidity,
+            country: (data.sys || []).country,
+            humidity: (data.main || []).humidity,
             description: data.weather[0].description,
-            error: ""
+            error: " "
         });
     } else {
     this.setState({
