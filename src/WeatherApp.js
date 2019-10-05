@@ -20,7 +20,7 @@ class WeatherApp extends React.Component {
         e.preventDefault();
         const city = e.target.elements.city.value;
         const country = e.target.elements.country.value;
-        const apiCall = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`);
+        const apiCall = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&appid=${API_KEY}`);
         const data = await apiCall.json();
         
         if ( city  && country ) {
