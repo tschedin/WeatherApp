@@ -21,6 +21,18 @@ class WeatherApp extends React.Component {
         const city = e.target.elements.city.value;
         const country = e.target.elements.country.value;
         const apiCall = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&appid=${API_KEY}`);
+       //const apiCall = undefined;
+
+    //// Placeholder for future zip API support
+    //     if ( zip != "" ) {
+    //         this.setState({
+    //             apiCall: '`http://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=${API_KEY}`',
+    //         });
+    //     } else {
+    //         this.setState({
+    //         apiCall:`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&appid=${API_KEY}`,
+    //     });
+    // };
         const data = await apiCall.json();
         
         if ( city  && country ) {
@@ -30,7 +42,7 @@ class WeatherApp extends React.Component {
             country: (data.sys || []).country,
             humidity: (data.main || []).humidity,
             description: data.weather[0].description,
-            error: " "
+            error: ""
         });
     } else {
     this.setState({
@@ -39,7 +51,7 @@ class WeatherApp extends React.Component {
         country: undefined,
         humidity: undefined,
         description: undefined,
-        error: "Invalid entry.  Please check city and country."   
+        error: "Invalid entry.  Please populate both city and country."   
     });
 }
 }
