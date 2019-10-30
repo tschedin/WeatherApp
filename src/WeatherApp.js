@@ -3,6 +3,7 @@ import React from "react";
 import Titles from "./Components/titles";
 import Form from "./Components/form";
 import Weather from "./Components/weather";
+import AddtlInfo from "./Components/addtlInfo";
 
 const API_KEY = "d798f5a297dd3b2e788deb6074ca3429";
 
@@ -56,6 +57,37 @@ class WeatherApp extends React.Component {
 }
 }
 
+
+getRadar = async (e) => {
+    e.preventDefault();
+    const apiCall = await fetch(`https://tile.openweathermap.org/map/precipitation_new/5/5/5.png?appid=${API_KEY}`);
+    const data = await apiCall.json();
+                        }
+
+
+constructor(props) {    
+    super(props)
+    this.state = { isEmptyState: true }
+  }
+
+triggerAddtlInfo = async (e) => {
+    e.preventDefault();
+    //const isEmptyState = true;
+
+    // if ( isEmptyState ){
+    //     this.setState({
+    //     });
+    //  } else {
+    // this.setState({ });}
+
+    this.setState({
+      //...this.state,
+      isEmptyState: false,
+      isAddtlInfo: true
+    })
+}
+
+
 render() {
     return (
     <div>
@@ -76,15 +108,17 @@ render() {
                                 description={this.state.description} 
                                 error={this.state.error}
                             />
+                            <addtlInfo addtlInfo={this.triggerAddtlInfo} />
+                            {this.state.isEmptyState && <AddtlInfo addtlInfo={this.triggerAddtlInfo} />}
+                            {this.state.isAddtlInfo && this.getRadar}  
                          </div> 
                       </div>
                   </div>
               </div>
           </div>
-    </div>
+    </div>    
         );
 }
-
 }; 
 
 export default WeatherApp;
